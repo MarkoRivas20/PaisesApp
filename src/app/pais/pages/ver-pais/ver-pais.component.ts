@@ -11,7 +11,7 @@ import { PaisService } from '../../services/pais.service';
 })
 export class VerPaisComponent implements OnInit {
 
-  pais!: Country;
+  pais!: Country[];
 
   constructor(private activatedRoute: ActivatedRoute,
               private paisService: PaisService) { }

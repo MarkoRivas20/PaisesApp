@@ -6,15 +6,46 @@
 
     <div class="row">
         <div class="col-12">
-            <h1>Pais: <small>{{pais.name}}</small></h1>
+            <h1>Pais: <small>{{pais[0].name.common}}</small></h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-4">
             <h3>Bandera</h3>
-            <img [src]="pais.flags" alt="">
+            <img [src]="pais[0].flags.png" class="img-thumbnail">
+        </div>
+        <div class="col-8">
+        <h3>Informacion</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>Poblacion</strong> {{pais[0].population | number}}
+            </li>
+            <li class="list-group-item">
+                <strong>Codigo numerico</strong> {{pais[0].population | number}}
+            </li>
+            <li class="list-group-item">
+                <strong>Codigo alpha3</strong> {{pais[0].cca3}}
+            </li>
+        </ul>
         </div>
     </div>
+
+    <h3>Traducciones</h3>
+    <div class="row">
+        <div class="col">
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['bre'].official}}</span>
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['jpn'].official}}</span>
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['fra'].official}}</span>
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['deu'].official}}</span>
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['tur'].official}}</span>
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['pol'].official}}</span>
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['rus'].official}}</span>
+            <span class="badge bg-primary margin-right-1">{{pais[0].translations['est'].official}}</span>
+        </div>
+    </div>
+    <!-- <pre class="mt-5">
+        {{pais[0] | json}}
+    </pre> -->
 </ng-template>
 
